@@ -4,7 +4,7 @@
 .Contacto
     @include dimensiones(100%, null)
     @include segmento (vertical, null)
-    padding: 25px
+    padding: 0 25px
     p
         @include segmento (horizontal, null)
         @include sombra(si, no)
@@ -65,7 +65,7 @@
     .Contacto
         @include dimensiones(100%, null)
         @include segmento (vertical, null)
-        padding: 25px
+        padding: 0 25px
         p
             @include segmento (horizontal, null)
             @include sombra(si, no)
@@ -130,6 +130,7 @@
         p
             @include segmento (horizontal, null)
             margin-bottom: 50px
+            font-size: 3rem
         form
             @include dimensiones(null, 300px)
             @include segmento (vertical, null)
@@ -140,7 +141,7 @@
                 border: 1.5px solid rgba(255, 255, 255, 0.233)
                 border-radius: 5px
                 @include sombra(no, si)
-                @include dimensiones(50%, 10%)
+                @include dimensiones(70%, 10%)
                 transition: 0.5s
             .Correo::placeholder
                 color: gray
@@ -151,12 +152,12 @@
                 border: 1.5px solid rgba(255, 255, 255, 0.233)
                 border-radius: 10px
                 @include sombra(no, si)
-                @include dimensiones(50%, 30%)
+                @include dimensiones(70%, 30%)
                 transition: width 0.5s, height 0.5s ease 0.5s
             .Mensaje::placeholder
                 color: gray
             .Mensaje:focus
-                @include dimensiones(70%, 70%)
+                @include dimensiones(90%, 70%)
                 outline: none
             .Boton
                 @include dimensiones(fit-content, 10%)

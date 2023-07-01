@@ -4,8 +4,12 @@
     .Presentacion 
         @include segmento (vertical, null)
         margin: 25px 25px 0
+        padding: 15px 0
         line-height: 15px
         gap: 15px
+        border-block: ridge $rojo 4px
+        border-top-left-radius: 4px
+        border-top-right-radius: 4px
         .Primera_Fila
             @include segmento (vertical, izquierda)
             @include dimensiones(100%, fit-content)
@@ -15,7 +19,6 @@
                 @include sombra(si, no)
                 font-size: 2.5rem
                 line-height: 1em
-                margin: 5% 0 0
                 .Dev
                     font-size: 1.15em
                     color: $rojo
@@ -44,7 +47,6 @@
                 @include sombra(si, no)
                 font-size: 5rem
                 line-height: 1em
-                margin: 5% 0 0
                 .Dev
                     font-size: 1.15em
                     color: $rojo
