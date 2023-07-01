@@ -1,0 +1,51 @@
+@import "_mixin"
+
+.Encabezado
+    @include segmento (horizontal, distanciado)
+    @include dimensiones(100%, null)
+    padding-inline: 25px
+    background-color: rgba(0, 0, 0, 0.5)
+    .Titulo
+        font-weight: bold
+    .Opciones
+        display: none
+    .Caja
+        position: relative
+        .Icono
+            position: relative
+            summary
+                list-style: none
+                .fa-solid
+                    font-size: 1.5em
+                p
+                    display: none
+
+@media only screen and (min-width: 768px)
+    .Encabezado 
+        @include segmento (horizontal, distanciado)
+        @include dimensiones(100%, 45px)
+        padding-inline: 50px
+        background-color: rgba(0, 0, 0, 0.5)
+        .Titulo
+            font-weight: bold
+            font-size: 1.5em
+            margin: 0
+        .Caja
+            display: none
+        .Opciones
+            @include segmento (horizontal, null)
+            @include dimensiones(null, 100%)
+            gap: 10px
+            cursor: pointer
+            p
+                margin: 0
+                text-decoration-line: underline
+                text-underline-position: under
+                @include segmento (vertical, centrado)
+                transition: 0.3s
+            p:hover
+                font-size: 1.25em
+                padding-bottom: 10px
+                text-decoration-color: $rojo
+                
+                

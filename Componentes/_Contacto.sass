@@ -1,0 +1,183 @@
+@import "_mixin"
+
+
+.Contacto
+    @include dimensiones(100%, null)
+    @include segmento (vertical, null)
+    padding: 25px
+    p
+        @include segmento (horizontal, null)
+        @include sombra(si, no)
+        margin-bottom: 40px
+        color: $rojo
+        font-size: 2rem
+    form
+        @include dimensiones(100%, 150px)
+        @include segmento (vertical, null)
+        align-items: start
+        gap: 7px
+        .Correo
+            background-color: rgba(0, 0, 0, 0.5)
+            border: 1px solid rgba(255, 255, 255, 0.233)
+            border-radius: 5px
+            @include sombra(no, si)
+            @include dimensiones(50%, 12.5%)
+            @include dimensiones(75%, null)
+            
+            transition: 0.5s
+        .Correo::placeholder
+            color: gray
+        .Correo:focus
+            outline: none
+        .Mensaje
+            background-color: rgba(0, 0, 0, 0.5)
+            border: 1px solid rgba(255, 255, 255, 0.233)
+            border-radius: 5px
+            @include sombra(no, si)
+            @include dimensiones(75%, 30%)
+            transition: width 0.5s, height 0.5s ease 0.5s
+        .Mensaje::placeholder
+            color: gray
+        .Mensaje:focus
+            @include dimensiones(90%, 50%)
+            outline: none
+        .Boton
+            @include dimensiones(fit-content, 12%)
+            @include sombra(no, si)
+            border-radius: 10px
+            background-color: $rojo
+            border: none
+        .Boton:active
+            @include dimensiones(fit-content, 10%)
+            justify-items: center
+            border-radius: 10px
+            background-color: rgb(206, 58, 70, 0.5)
+            font-size: 0.85em
+            display: flex
+            justify-content: center
+            position: relative
+            margin: 0.2% 0 0 1%
+        .Boton::placeholder
+            color: gray
+
+
+@media only screen and (min-width: 290px)
+    .Contacto
+        @include dimensiones(100%, null)
+        @include segmento (vertical, null)
+        padding: 25px
+        p
+            @include segmento (horizontal, null)
+            @include sombra(si, no)
+            margin-bottom: 40px
+            color: $rojo
+            font-size: 2rem
+        form
+            @include dimensiones(null, 150px)
+            @include segmento (vertical, null)
+            align-items: start
+            gap: 7px
+            .Correo
+                background-color: rgba(0, 0, 0, 0.5)
+                border: 1px solid rgba(255, 255, 255, 0.233)
+                border-radius: 5px
+                @include sombra(no, si)
+                @include dimensiones(50%, 12.5%)
+                transition: 0.5s
+            .Correo::placeholder
+                color: gray
+            .Correo:focus
+                outline: none
+            .Mensaje
+                background-color: rgba(0, 0, 0, 0.5)
+                border: 1px solid rgba(255, 255, 255, 0.233)
+                border-radius: 5px
+                @include sombra(no, si)
+                @include dimensiones(50%, 30%)
+                transition: width 0.5s, height 0.5s ease 0.5s
+            .Mensaje::placeholder
+                color: gray
+            .Mensaje:focus
+                @include dimensiones(70%, 50%)
+                outline: none
+            .Boton
+                @include dimensiones(fit-content, 12%)
+                @include sombra(no, si)
+                border-radius: 10px
+                background-color: $rojo
+                border: none
+            .Boton:active
+                @include dimensiones(fit-content, 10%)
+                justify-items: center
+                border-radius: 10px
+                background-color: rgb(206, 58, 70, 0.5)
+                font-size: 0.85em
+                display: flex
+                justify-content: center
+                position: relative
+                margin: 0.2% 0 0 1%
+            .Boton::placeholder
+                color: gray
+
+
+@media only screen and (min-width: 769px)
+    .Contacto
+        @include dimensiones(50%, null)
+        @include segmento (vertical, null)
+        @include padding(pc)
+        margin-top: 0
+        padding-right: 0
+        p
+            @include segmento (horizontal, null)
+            margin-bottom: 50px
+        form
+            @include dimensiones(null, 300px)
+            @include segmento (vertical, null)
+            gap: 10px
+            align-items: start
+            .Correo
+                background-color: rgba(0, 0, 0, 0.5)
+                border: 1.5px solid rgba(255, 255, 255, 0.233)
+                border-radius: 5px
+                @include sombra(no, si)
+                @include dimensiones(50%, 10%)
+                transition: 0.5s
+            .Correo::placeholder
+                color: gray
+            .Correo:focus
+                outline: none
+            .Mensaje
+                background-color: rgba(0, 0, 0, 0.5)
+                border: 1.5px solid rgba(255, 255, 255, 0.233)
+                border-radius: 10px
+                @include sombra(no, si)
+                @include dimensiones(50%, 30%)
+                transition: width 0.5s, height 0.5s ease 0.5s
+            .Mensaje::placeholder
+                color: gray
+            .Mensaje:focus
+                @include dimensiones(70%, 70%)
+                outline: none
+            .Boton
+                @include dimensiones(fit-content, 10%)
+                @include sombra(no, si)
+                border-radius: 10px
+                background-color: $rojo
+                border: none
+                cursor: pointer
+            .Boton:active
+                @include dimensiones(fit-content, 10%)
+                justify-items: center
+                border-radius: 10px
+                background-color: rgb(206, 58, 70, 0.5)
+                font-size: 0.85em
+                display: flex
+                justify-content: center
+                position: relative
+                margin: 0.2% 0 0 0.5%
+            .Boton::placeholder
+                color: gray
+
+            
+
+        

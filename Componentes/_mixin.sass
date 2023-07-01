@@ -1,0 +1,70 @@
+$rojo: rgb(206, 58, 70)
+
+@mixin segmento ($direccion, $ubicacion)
+    @if $direccion == vertical
+        display: flex
+        flex-direction: column
+        @if $ubicacion == centrado
+            @include alinear(center, center)
+        @else if $ubicacion == izquierda
+            @include alinear(left, null)
+        @else if $ubicacion == derecha
+            @include alinear(right, center)
+    @else if $direccion == horizontal
+        display: flex
+        @if $ubicacion == centrado
+            @include alinear(center, center)
+        @else if $ubicacion == distanciado
+            @include alinear(space-between, center)
+
+@mixin alinear($principal, $secundaria)
+    justify-content: $principal
+    align-items: $secundaria
+    
+@mixin parrilla($columnas)
+    @include alinear (center, center)
+    @if $columnas == 1
+        display: grid
+        grid-template-columns: 1fr
+    @else if $columnas == 2
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+    @else if $columnas == 3
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+
+@mixin fondo
+    border: 1px solid rgba(255, 255, 255, 0.233)
+    background-image: radial-gradient(rgba(3, 4, 46, 0.288), rgba(3, 4, 31, 0.658)) 
+    border-radius: 10px
+    @include sombra(no, si)
+    
+
+@mixin sombra($texto, $caja)
+    @if $texto == si
+        text-shadow: 3.5px 3.5px 2.5px rgba(0, 0, 0, 0.5)
+    @else if $texto == no
+        text-shadow: none
+    @if $caja == si
+        box-shadow: 3.5px 3.5px 2.5px 2px rgba(0, 0, 0, 0.35)
+    @else if $caja == no
+        box-shadow: none
+        
+
+@mixin dimensiones($ancho, $alto)
+    box-sizing: border-box
+    width: $ancho
+    height: $alto
+
+@mixin icono($size:4em)
+    font-size: $size
+
+@mixin padding($dispositivo)
+    padding: $dispositivo
+    @if $dispositivo == cel
+        padding: 25px
+    @else if $dispositivo == pc
+        padding: 50px
+
+        
+

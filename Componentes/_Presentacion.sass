@@ -1,0 +1,62 @@
+@import "_mixin"
+
+@media only screen and (max-width: 768px)
+    .Presentacion 
+        @include segmento (vertical, null)
+        margin: 25px 25px 0
+        line-height: 15px
+        gap: 15px
+        .Primera_Fila
+            @include segmento (vertical, izquierda)
+            @include dimensiones(100%, fit-content)
+            gap: 25px
+            .Mayus
+                @include segmento (vertical, izquierda)
+                @include sombra(si, no)
+                font-size: 2.5rem
+                line-height: 1em
+                margin: 5% 0 0
+                .Dev
+                    font-size: 1.15em
+                    color: $rojo
+            .Minus 
+                margin-top: 25px
+                line-height: initial
+        .Segunda_Fila
+            @include segmento (horizontal, null)
+
+
+@media only screen and (min-width: 769px)
+    .Presentacion 
+        @include segmento (vertical, null)
+        border-block: ridge $rojo 10px
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+        margin: 50px
+        line-height: 15px
+        gap: 30px
+        .Primera_Fila
+            @include segmento (horizontal, distanciado)
+            @include dimensiones(100%, 400px)
+            gap: 30px
+            .Mayus
+                @include segmento (vertical, izquierda)
+                @include sombra(si, no)
+                font-size: 5rem
+                line-height: 1em
+                margin: 5% 0 0
+                .Dev
+                    font-size: 1.15em
+                    color: $rojo
+            .svg
+                @include segmento (vertical, centrado)
+                @include dimensiones(400px, 400px)
+        .Segunda_Fila
+            @include segmento (horizontal, null)
+            padding-bottom: 50px
+
+
+
+
+
+

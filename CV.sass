@@ -1,0 +1,29 @@
+@use "./Componentes/_mixin"
+@use "./Componentes/_Encabezado"
+@use "./Componentes/_Presentacion"
+@use "./Componentes/_Habilidades"
+@use "./Componentes/_Contacto"
+
+@import "./Componentes/_mixin"
+
+
+    
+body
+    background-image: linear-gradient(to right, rgb(36, 26, 54), rgb(26, 16, 44), rgb(16, 6, 34))
+    background-attachment: fixed
+    @include dimensiones(fit-content, null)
+    margin: 0
+
+*
+    font-size: 10px
+    font-family: 'Roboto', sans-serif
+    color: white
+    letter-spacing: 0.01rem
+
+@media only screen and (min-width: 768px)
+    *
+        font-size: 14px
+        font-family: 'Roboto', sans-serif
+        color: white
+        letter-spacing: 0.05rem   
+

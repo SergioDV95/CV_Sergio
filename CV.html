@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CV.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Currículum</title>
+</head>
+<body>
+    <nav class="Encabezado">
+        <h2 class="Titulo">Currículum</h2>
+        <div class="Opciones">
+            <p>Inicio</p>
+            <p>Servicios</p>
+            <p>Acerca</p>
+            <p>Portafolio</p>
+            <p>Contacto</p>
+        </div>
+        <div class="Caja">
+            <details class="Icono">
+                <summary>
+                    <i class="cerrado fa-solid fa-circle-chevron-down"></i>
+                </summary>
+                <p>Inicio</p>
+                <p>Servicios</p>
+                <p>Acerca</p>
+                <p>Portafolio</p>
+                <p>Contacto</p>
+            </details>
+        </div>
+    </nav>
+    <section class="Presentacion">
+        <div class="Primera_Fila">
+            <p class="Mayus">
+                Hola, soy un <br>
+                <span class="Dev">
+                    Desarrollador Web
+                </span>
+                a tu servicio
+                <span class="Minus">Escultor de ideas para la web, doy forma y convierto en realidad tus proyectos más ambiciosos o sencillos</span>
+            </p>
+            <img class="svg" src="./Componentes/programador.svg" alt="">
+        </div>
+        <div class="Segunda_Fila">
+            <p>
+                Mi nombre es Sergio Daza V. y soy un Desarrollador Web en formación que te brindará las facilidades para que puedas 
+                emprender tus ideas en un espacio en la web creado solo para ti, tu organización, marca, etc... 
+                <div class="decoracion"></div>
+            </p>
+        </div>
+    </section>
+    <section class="Habilidades">
+        <div class="Titulo">
+            <p class="Hab">Habilidades</p>
+            <p class="sub">(conocidas y por conocer)</p>
+        </div>
+        <nav class="grid">
+            <figure class="Columna_1">
+                <i class="github fa-brands fa-github"></i>
+                <h3>Control de GitHub</h3>
+                <p>Gestión de archivos para la creación de proyectos y versionamiento web</p>
+            </figure>
+            <figure class="Columna_2">
+                <i class="apps fa-solid fa-mobile-screen-button"></i>
+                <h3>Diseño de Apps</h3>
+                <p>Creación de apps con soporte en las múltiples plataformas</p>
+            </figure>
+            <figure class="Columna_3">
+                <i class="marcado fa-solid fa-code"></i>
+                <h3>Lenguajes de Marcado</h3>
+                <p>Estructuración de contenido en lenguajes como HTML, que desees proyectar en tu sitio</p>
+            </figure>
+            <figure class="Columna_1">
+                <i class="terminal fa-solid fa-sliders"></i>
+                <h3>Manejo de Terminales</h3>
+                <p>Fluidez en el acceso local de las múltuples carpetas para un ágil control sobre ellas</p>
+            </figure>
+            <figure class="Columna_2">
+                <i class="estilos fa-solid fa-cube"></i>
+                <h3>Lenguajes de Estilo</h3>
+                <p>Diseño y maquetación para darle vida y forma a tu sitio</p>
+            </figure>
+            <figure class="Columna_3">
+                <i class="programacion fa-solid fa-server"></i>
+                <h3>Lenguajes de Programación</h3>
+                <p>Funcionalidad y operabilidad para darle dinamismo a tu contenido</p>
+            </figure>
+            <figure class="Columna_1">
+                <i class="base fa-solid fa-database"></i>
+                <h3>Bases de Datos</h3>
+                <p>Administración de la información almacenada de tu sitio para el uso del usuario</p>
+            </figure>
+            <figure class="Columna_2">
+                <i class="user fa-solid fa-user-tie"></i>
+                <h3>Diseño UX/UI</h3>
+                <p>Enfocado en la facilidad con la que el usuario podrá interactuar y acceder a la información</p>
+        </nav>
+    </section>
+    <div class="Contacto">
+        <p>Contactame</p>
+        <form id="Contact_form" action="submit">
+            <input class="Correo" placeholder="Correo" type="email">
+            <textarea class="Mensaje" placeholder="¿En qué te puedo ayudar?" name="Contact_form" id="" cols="30" rows="10"></textarea>
+            <input class="Boton" type="button" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>

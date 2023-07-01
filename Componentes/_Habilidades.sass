@@ -1,0 +1,105 @@
+@import "_mixin"
+
+@media only screen and (min-width: 50px)
+    .Habilidades
+        @include dimensiones(100%, 100%)
+        @include segmento (vertical, null)
+        @include padding(cel)
+        @include sombra(si, no)
+        gap: 30px
+        margin-top: 15%
+        .Titulo
+            @include segmento (vertical, null)
+            .Hab
+                color: $rojo
+                font-size: 2rem
+                margin: 0
+            .sub
+                font-size: 0.75rem
+                margin: 0
+                letter-spacing: 0.1em
+        .grid
+            @include parrilla(1)
+            gap: 15px
+            figure
+                @include fondo
+                @include padding(15px)
+                @include alinear(center, center)
+                gap: 20px
+                margin: 0
+                .nombre
+                    @include segmento (vertical , derecha)
+                i
+                    @include icono
+                    color: $rojo
+                h3, p, i
+                    margin: 5px
+            
+@media only screen and (min-width: 290px)
+    .Habilidades
+        @include dimensiones(100%, 100%)
+        @include segmento (vertical, null)
+        @include padding(cel)
+        @include sombra(si, no)
+        gap: 30px
+        margin: 0
+        .Titulo
+            @include segmento (vertical, null)
+            .Hab
+                color: $rojo
+                font-size: 2rem
+                margin: 0
+            .sub
+                font-size: 0.75rem
+                margin: 0
+                letter-spacing: 0.1em
+        .grid
+            @include parrilla(2)
+            gap: 15px
+            figure
+                @include fondo
+                @include padding(15px)
+                @include alinear(center, center)
+                @include dimensiones(100%, 100%)
+                gap: 20px
+                margin: 0
+                .nombre
+                    @include segmento (vertical , derecha)
+                i
+                    @include icono
+                    color: $rojo
+                h3, p, i
+                    margin: 5px
+
+@media only screen and (min-width: 768px)
+    .Habilidades 
+        @include dimensiones(fit-content, 100%) 
+        @include segmento (vertical, izquierda)
+        padding: 50px 0
+        margin: 0 50px
+        @include sombra(si, no)
+        gap: 60px
+        margin-top: 0
+        border-block-end: ridge $rojo 10px
+        .Titulo
+            @include segmento (horizontal, centrado)
+            .Hab
+                color: $rojo
+                font-size: 3rem
+                margin: 0
+            .sub
+                font-size: 0.75em
+                margin: 0
+        .grid
+            @include parrilla(3)
+            margin: 0
+            figure
+                @include dimensiones(100%, 100%)
+                @include fondo
+                i
+                    margin-bottom: 30px
+                    @include icono($size:6em)
+                    color: $rojo
+                h3, p
+                    margin: 0
+        
